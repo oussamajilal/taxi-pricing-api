@@ -5,7 +5,7 @@ module.exports = {
     calculateRidePrice: validate({
         options: { flatten: true },
         body: {
-            miles: Joi.number().required(),
+            distance: Joi.number().required(),
             startTime: Joi.date().required().raw()
         }
     })

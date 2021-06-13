@@ -7,8 +7,8 @@ function rides(req, res, next) {
 }
 
 function calculateRidePrice(req, res, next) {
-    const { miles, startTime } = req.body;
-    res.json({ price: utils.calculatePrice(miles, startTime) });
+    const { distance, startTime } = req.body;
+    res.json({ price: utils.calculatePrice(distance, startTime) });
     next();
 }
 

@@ -16,10 +16,10 @@ function getMultiplier(currentTime) {
     return 0.5;
 }
 
-function calculatePrice(miles, startTime) {
+function calculatePrice(distance, startTime) {
     const extractedTime = moment(startTime).utcOffset('+0000').format('HH:mm');
     const currentTime = moment(extractedTime, 'HH:mm');
-    return 1 + (miles / 0.2) * getMultiplier(currentTime);
+    return 1 + (distance / 0.2) * getMultiplier(currentTime);
 }
 
 module.exports = { calculatePrice };
