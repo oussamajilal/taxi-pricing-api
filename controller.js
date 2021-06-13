@@ -1,4 +1,5 @@
-const rideList = require('./rides')
+const rideList = require('./rides');
+const utils = require('./utils');
 
 function rides(req, res, next) {
     res.json(rideList);
@@ -6,8 +7,8 @@ function rides(req, res, next) {
 }
 
 function calculateRidePrice(req, res, next) {
-    console.log(req.body);
-    res.send('OK');
+    const { miles, startTime } = req.body;
+    res.json({ price: utils.calculatePrice(miles, startTime) });
     next();
 }
 

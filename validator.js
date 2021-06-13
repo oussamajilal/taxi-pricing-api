@@ -6,8 +6,7 @@ module.exports = {
         options: { flatten: true },
         body: {
             miles: Joi.number().required(),
-            startTime: Joi.date().required(),
-            duration: Joi.number().required(),
+            startTime: Joi.date().required().raw()
         }
     })
 };

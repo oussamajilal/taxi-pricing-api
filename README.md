@@ -15,3 +15,7 @@
 ## Available endpoints
 
 - > GET /rides
+
+## Unit tests
+
+> npx jest
