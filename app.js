@@ -1,6 +1,5 @@
 const restify = require('restify');
-const controller = require('./controller');
-const validator = require('./validator');
+const router = require('./router')
 
 const server = restify.createServer();
 
@@ -16,8 +15,7 @@ server.on('restifyError', function (req, res, err, next) {
   res.json(err.errors);
 });
 
-server.get('/rides', controller.rides);
-server.post('/rides/calculate-price', validator.calculateRidePrice, controller.calculateRidePrice);
+router.configure(server);
 
 server.listen(8080, function () {
   console.log('%s listening at %s', server.name, server.url);
