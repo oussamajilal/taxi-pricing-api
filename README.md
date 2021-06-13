@@ -15,6 +15,7 @@
 ## Available endpoints
 
 - > GET /rides
+- > POST /rides/calculate-price
 
 ## Unit tests
 
