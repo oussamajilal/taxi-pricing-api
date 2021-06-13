@@ -4,7 +4,9 @@
   "description": "Taxi pricing API",
   "main": "app.js",
   "dependencies": {
-    "restify": "^8.5.1"
+    "joi": "^14.3.1",
+    "restify": "^8.5.1",
+    "restify-api-validation": "^1.4.13"
   },
   "devDependencies": {},
   "scripts": {},

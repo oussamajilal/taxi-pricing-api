@@ -1,9 +1,14 @@
 const rideList = require('./rides')
 
 function rides(req, res, next) {
-    res.contentType = 'json';
-    res.send(rideList);
+    res.json(rideList);
     next();
 }
 
-module.exports = { rides };
+function calculateRidePrice(req, res, next) {
+    console.log(req.body);
+    res.send('OK');
+    next();
+}
+
+module.exports = { rides, calculateRidePrice };
