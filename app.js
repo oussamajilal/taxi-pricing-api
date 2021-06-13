@@ -1,6 +1,6 @@
 const restify = require('restify');
-const router = require('./router')
-
+const cors = require('cors');
+const router = require('./router');
 const server = restify.createServer();
 
 server.use(restify.plugins.bodyParser());
@@ -16,6 +16,8 @@ server.on('restifyError', function (req, res, err, next) {
 });
 
 router.configure(server);
+
+server.use(cors())
 
 server.listen(8080, function () {
   console.log('%s listening at %s', server.name, server.url);
