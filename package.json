@@ -1,0 +1,21 @@
+{
+  "name": "taxi-pricing-api",
+  "version": "1.0.0",
+  "description": "Taxi pricing API",
+  "main": "app.js",
+  "dependencies": {
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oussamajilal/taxi-pricing-api.git"
+  },
+  "author": "Oussama Jilal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oussamajilal/taxi-pricing-api/issues"
+  },
+  "homepage": "https://github.com/oussamajilal/taxi-pricing-api#readme"
+}
